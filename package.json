@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/DiegoAndresMarmota/API-Rest-Node/issues"
   },
-  "homepage": "https://github.com/DiegoAndresMarmota/API-Rest-Node#readme"
+  "homepage": "https://github.com/DiegoAndresMarmota/API-Rest-Node#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
