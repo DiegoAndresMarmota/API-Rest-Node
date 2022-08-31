@@ -11,10 +11,10 @@ const conexion = async () => {
         //useUnifiedTopology:true
         //useCreateIndex:true
 
-        console.log("Conectado satisfactoriamente a la base de datos mi_blog")
+        console.log("Conectado satisfactoriamente a la base de datos mi_blog");
 
-    } catch (error) {
-        console.log(error)
+    } catch(error) {
+        console.log(error);
         throw new Error("No se ha podido conectar a la base de datos");
     }
 }
