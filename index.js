@@ -20,16 +20,29 @@ app.use(express.json());
 
 //7. Crear rutas
 app.get("/probando", (req, res) => {
+
     console.log('Ejecucion de consola')
-    return res.status(200).send(`
-        <div>
-            <h1> Probando ruta NodeJs </h1>
-            <p> Creando api resto con node </p>
-        </div>
-    `);
+
+    return res.status(200).json([{
+        nombre: "Estrella",
+        raza: "Felina",
+        habilidad: "Daño elemental +10",
+    },
+    {   nombre: "Luz",
+        raza: "Felina",
+        habilidad: "Daño de fuego +15",
+        },
+    ]);
+});
+
+app.get("/", (req, res) => {
+
+    return res.status(200).send(
+        "<h1>Empezando a crear una api</h1>"
+    );
 });
 
 //6. Crear servidor y escuchar peticiones http
 app.listen(puerto, () => {
-    console.log("Servidor ejecutandose en el puerto " +puerto);
+    console.log("Servidor ejecutandose en el puerto " + puerto);
 });
