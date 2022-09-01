@@ -18,7 +18,16 @@ app.use(cors());
 //5. Convertir body a objeto js
 app.use(express.json());
 
-//Crear rutas
+//7. Crear rutas
+app.get("/probando", (req, res) => {
+    console.log('Ejecucion de consola')
+    return res.status(200).send(`
+        <div>
+            <h1> Probando ruta NodeJs </h1>
+            <p> Creando api resto con node </p>
+        </div>
+    `);
+});
 
 //6. Crear servidor y escuchar peticiones http
 app.listen(puerto, () => {
