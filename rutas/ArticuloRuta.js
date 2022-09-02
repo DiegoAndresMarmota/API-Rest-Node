@@ -7,8 +7,8 @@ const ArticuloControlador = require("../controladores/ArticuloControl");
 router.get("/ruta-de-prueba", ArticuloControlador.prueba);
 router.get("/curso", ArticuloControlador.prueba);
 
-
-
+//Ruta útil
+router.post("/crear", ArticuloControlador.crear);
 
 
 module.exports = router;

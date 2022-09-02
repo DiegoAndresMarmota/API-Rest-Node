@@ -1,3 +1,4 @@
+const res = require("express/lib/response");
 
 const prueba = (req, res) => {
 
@@ -20,7 +21,15 @@ const curso = (req, res) => {
     ]);
 };
 
+const crear = { req, res } => {
+
+    return res.status(200).json({
+        mensaje: "Guardar"
+    })
+}
+
 module.exports = {
     prueba,
-    curso
+    curso,
+    crear
 }
