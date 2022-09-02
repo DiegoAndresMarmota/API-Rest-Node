@@ -18,7 +18,13 @@ app.use(cors());
 //5. Convertir body a objeto js
 app.use(express.json());
 
-//7. Crear rutas
+//7.B Crear rutas
+const rutas_articulo = require("./rutas/ArticuloRuta");
+
+//Cargo de las rutas
+app.use("/api", rutas_articulo);
+
+//7.A Rutas pruebas iniciales
 app.get("/probando", (req, res) => {
 
     console.log('Ejecucion de consola')
