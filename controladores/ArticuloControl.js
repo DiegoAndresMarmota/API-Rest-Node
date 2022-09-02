@@ -23,10 +23,22 @@ const curso = (req, res) => {
 
 const crear = ( req, res ) => {
 
+    //1.Recoger parametros por post a guardar
+    let parametros = req.body;
+    
+    //2.Validar datos
 
+    //3.Crear el objeto a guardar
+
+    //4.Asignar valores a objeto(manual o auto)
+
+    //5.Guardar el articulo en la base de datos
+
+    //6.Devolver resultado
 
     return res.status(200).json({
-        mensaje: "Guardar"
+        mensaje: "Guardar",
+        parametros
     })
 }
 
