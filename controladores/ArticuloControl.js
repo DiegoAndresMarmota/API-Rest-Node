@@ -21,7 +21,9 @@ const curso = (req, res) => {
     ]);
 };
 
-const crear = { req, res } => {
+const crear = ( req, res ) => {
+
+
 
     return res.status(200).json({
         mensaje: "Guardar"
