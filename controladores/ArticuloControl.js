@@ -1,4 +1,6 @@
-const res = require("express/lib/response");
+//const res = require("express/lib/response");
+const validator = require("validator");
+
 
 const prueba = (req, res) => {
 
@@ -27,6 +29,21 @@ const crear = ( req, res ) => {
     let parametros = req.body;
     
     //2.Validar datos
+    try {
+
+        let validar_titulo = !validator.isEmpty(parametros.titulo);
+
+        let validar_contenido = !validator.isEmpty(parametros.contenido);
+
+        if (!validar_titulo || validar_contenido) {
+            throw new Error("No se ha validado la información !!")
+        }
+        
+    } catch (error) {
+        return res.status(400).json({
+            status: "error",
+            mensaje: "Faltan datos por enviar", 
+        }
 
     //3.Crear el objeto a guardar
 
@@ -37,10 +54,10 @@ const crear = ( req, res ) => {
     //6.Devolver resultado
 
     return res.status(200).json({
-        mensaje: "Guardar",
-        parametros
-    })
-}
+            mensaje: "Guardar",
+            parametros
+        })
+    }
 
 module.exports = {
     prueba,
